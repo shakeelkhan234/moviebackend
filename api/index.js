@@ -25,6 +25,10 @@ app.post("/", (req, res) => {
   console.log(req.body);
 });
 
+app.get("/new", (req, res) => {
+  res.send("hello world");
+});
+
 app.post("/movies", upload.single("image"), async (req, res) => {
   const { title, year, genre, rating } = req.body;
   const image = req.file.buffer;
