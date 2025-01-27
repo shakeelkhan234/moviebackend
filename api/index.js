@@ -7,7 +7,10 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: '*',  // Allow all origins, or specify your frontend URL
+  methods: ['GET', 'POST'],  // Ensure POST is allowed
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
