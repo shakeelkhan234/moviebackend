@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-mongoose.connect("mongodb://localhost:27017/movies", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://shakeelkhan187004:shakeel%40123@cluster0.svnwk.mongodb.net/", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("MongoDB connected");
   })
