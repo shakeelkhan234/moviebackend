@@ -35,7 +35,7 @@ app.get("/new", (req, res) => {
 
 app.post("/movies",  async (req, res) => {
   const { title,  genre } = req.body;
-  const image = req.file.buffer;
+ 
 
   const newMovie = new Movie({
     title,
