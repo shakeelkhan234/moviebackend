@@ -6,22 +6,13 @@ const movieSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  year: {
-    type: Number,
-    required: true
-  },
+ 
   genre: {
     type: String,
     required: true
-  },
-  rating: {
-    type: Number,
-    required: true
-  },
-  image: {
-    type: Buffer,
-    required: true
   }
+ 
+
 });
 
 // Create the Movie model from the schema
