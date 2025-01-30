@@ -33,20 +33,19 @@ app.get("/new", (req, res) => {
   res.send("hello world");
 });
 
-app.post("/movies", upload.single("image"), async (req, res) => {
-  const { title, year, genre, rating } = req.body;
+app.post("/movies",  async (req, res) => {
+  const { title,  genre } = req.body;
   const image = req.file.buffer;
 
   const newMovie = new Movie({
     title,
-    year,
+   
     genre,
-    rating,
-    image: image,
+   
   });
   await newMovie.save();
 
-  res.send("Movie added successfully");
+  res.send("Note  added successfully");
 });
 
 // route for getting all movies
